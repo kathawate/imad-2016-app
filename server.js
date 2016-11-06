@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-  var articleone={
+var article={
+  'articleone':{
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -17,8 +17,8 @@ app.use(morgan('combined'));
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-};
- var articletwo={
+},
+  'articletwo':{
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -30,8 +30,8 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
     
-};
- var articlethree={
+},
+  'articlethree':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -42,6 +42,7 @@ app.use(morgan('combined'));
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
+},
 };
 function createTemplate(data){
     var title=data.title;
@@ -97,8 +98,8 @@ res.send(counter.toString());
 
 
 
-app.get('/article-one',function (req,res){
-    res.send(createTemplate(article-one));
+app.get('/:articleName',function (req,res){
+    res.send(createTemplate(articles[article-one]));
 });
 
 
@@ -111,6 +112,16 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+
+var names = [];
+app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxx
+//Get the name from the request
+var name = req.params.name;
+
+names.push(name);
+//JSON:Javascript Object Notation
+
+res.send(JSON.stringify(names)); };
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
