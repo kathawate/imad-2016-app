@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-   'articleone':{
+
+  var articleone={
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -17,8 +17,8 @@ var articles={
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-},
-  'articletwo':{
+};
+  //'articletwo':{
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -31,7 +31,7 @@ var articles={
             </p>`
     
 },
-  'articlethree':{
+  //'articlethree':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -43,7 +43,7 @@ var articles={
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 }
-};
+
 function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
@@ -89,8 +89,8 @@ app.get('/', function (req, res) {
 });
 var articleName=req.params.articleName;
 
-app.get('/:articleName',function (req,res){
-    res.send(createTemplate(articles[articleName]));
+app.get('/articleone',function (req,res){
+    res.send(createTemplate(articleone));
 });
 
 
