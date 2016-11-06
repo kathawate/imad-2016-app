@@ -92,9 +92,9 @@ app.get('/', function (req, res) {
 
 //var counter = 0;
 //app.get('/counter', function(req,res) {
-counter = counter + 1;
-res.send(counter.toString());
-});
+//counter = counter + 1;
+//res.send(counter.toString());
+//});
 
 var articleName=req.params.articleName;
 
@@ -113,7 +113,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 
-//var names = [];
+var names = [];
 //app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxx
 //Get the name from the request
 //var name = req.params.name;
@@ -121,8 +121,8 @@ app.get('/ui/madi.png', function (req, res) {
 //names.push(name);
 //JSON:Javascript Object Notation
 
-res.send(JSON.stringify(names));
-};
+//res.send(JSON.stringify(names));
+});
 
 var port = 8081; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8081, function () {
