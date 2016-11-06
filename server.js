@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-  var article-one:{
+var articles={
+   'article-one':{
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -17,8 +17,8 @@ app.use(morgan('combined'));
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-};
-  //'article-two':{
+},
+  'article-two':{
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -31,7 +31,7 @@ app.use(morgan('combined'));
             </p>`
     
 },
- // 'article-three':{
+  'article-three':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -43,7 +43,7 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 }
-
+};
 function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
