@@ -44,7 +44,7 @@ var articles={
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 }
-}
+};
 function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
