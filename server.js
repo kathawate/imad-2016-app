@@ -2,12 +2,11 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-
 var app = express();
 app.use(morgan('combined'));
 
 var articles={
- articleone:{
+  'article-one':{
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -19,7 +18,7 @@ var articles={
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 },
-  articletwo:{
+  'article-two':{
      title:' article-two |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -32,7 +31,7 @@ var articles={
             </p>`
     
 },
- articlethree:{
+  'article-three':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -89,8 +88,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function (req,res){
-    res.send(createTemplate(articleone));
+app.get('/:articleName',function (req,res){
+    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two',function (req,res){
