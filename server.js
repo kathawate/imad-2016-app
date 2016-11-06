@@ -18,7 +18,7 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 };
-  //'articletwo':{
+ // 'articletwo':{
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -31,7 +31,7 @@ app.use(morgan('combined'));
             </p>`
     
 },
-  //'articlethree':{
+ // 'articlethree':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -44,7 +44,7 @@ app.use(morgan('combined'));
             </p>`
 }
 
-function createTemplate(data){
+//function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
     var date=data.date;
@@ -84,13 +84,14 @@ var htmlTemplate=`
 `;
     return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleName=req.params.articleName;
+//var articleName=req.params.articleName;
 
-app.get('/articleone',function (req,res){
-    res.send(createTemplate(articleone));
+app.get('/article-one',function (req,res){
+    res.sendFile(path.join(__dirname,'ui','article-one'));
 });
 
 
