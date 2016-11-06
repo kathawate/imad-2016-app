@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-  //var articleone={
+  var articleone={
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -18,7 +18,7 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 };
- //'articletwo':{
+ var articletwo={
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -30,8 +30,8 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
     
-},
- // 'articlethree':{
+};
+ var articlethree={
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -42,7 +42,7 @@ app.use(morgan('combined'));
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-}
+};
 //function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
