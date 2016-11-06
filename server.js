@@ -87,10 +87,10 @@ var htmlTemplate=`
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-//var articleName=req.params.articleName;
+var articleName=req.params.articleName;
 
-app.get('/articleone',function (req,res){
-    res.send(createTemplate(articleone));
+app.get('/:articleName',function (req,res){
+    res.send(createTemplate(articles[articleName]));
 });
 
 
