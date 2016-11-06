@@ -7,7 +7,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-var articleone:{
+ articleone:{
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -19,7 +19,7 @@ var articleone:{
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 },
-var articletwo:{
+ articletwo:{
      title:' article-two |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -32,7 +32,7 @@ var articletwo:{
             </p>`
     
 },
-var articlethree:{
+ articlethree:{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
