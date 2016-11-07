@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
- articleone:{
+
+ var articleone={
   title:'article-one |kathawate',
   heading:'latest article-one',
   date:'5 sept 2016',
@@ -17,31 +17,7 @@ var articles={
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-} ,
- 'articletwo':{
-  title:'article-two |kathawate',
-  heading:'latest article-two',
-  date:'5 sept 2016',
-  content: `<p>
-         My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-          My name is shubham kathawate.i'm 21 years old and i love the programming...
-        </p>
-        <p>
-             My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-            </p>`
-} ,
- 'articlethree':{
-  title:'article-three |kathawate',
-  heading:'latest article-three',
-  date:'5 sept 2016',
-  content: `<p>
-         My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-          My name is shubham kathawate.i'm 21 years old and i love the programming...
-        </p>
-        <p>
-             My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-            </p>`
-} 
+
 };
 function createTemplate(data){
     var title=data.title;
