@@ -96,9 +96,6 @@ app.get('/articlethree',function (req,res){
     res.send(createTemplate(articlethree));
 });
 
-app.get('/articlethree',function (req,res){
-    res.send(createTemplate(articlethree));
-});
 
 
 
