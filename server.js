@@ -84,13 +84,21 @@ var htmlTemplate=`
 `;
     return htmlTemplate;
 }
+//var articleName=req.params.articleName;
 
-app.get('/:articleName',function (req,res){
-    var articleName=req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+app.get('/articleone',function (req,res){
+    res.send(createTemplate(articleone));
+});
+app.get('/articletwo',function (req,res){
+    res.send(createTemplate(articletwo));
+});
+app.get('/articlethree',function (req,res){
+    res.send(createTemplate(articlethree));
 });
 
-
+app.get('/articlethree',function (req,res){
+    res.send(createTemplate(articlethree));
+});
 
 
 
