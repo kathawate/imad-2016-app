@@ -85,18 +85,6 @@ var htmlTemplate=`
     return htmlTemplate;
 }
 
-//app.get('/articleone',function (req,res){
-  //  res.send(createTemplate(articleone));
-//});
-//app.get('/articletwo',function (req,res){
-  //  res.send(createTemplate(articletwo));
-//});
-//app.get('/articlethree',function (req,res){
- //   res.send(createTemplate(articlethree));
-//});
-
-
-
 app.get('/:articleName',function (req,res){
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
