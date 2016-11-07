@@ -19,31 +19,6 @@ app.use(morgan('combined'));
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 };
-  var articletwo={
-     title:' article-two |kathawate',
-    heading:'article-two latest',
-    date:'nov 6, 2016',
-    content: `<p>
-         My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-          My name is shubham kathawate.i'm 21 years old and i love the programming...
-        </p>
-        <p>
-             My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-            </p>`
-    
-};
-  var articlethree={
-     title:' article-three |kathawate',
-    heading:'article-three latest',
-    date:'nov 6, 2016',
-    content: `<p>
-         My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-          My name is shubham kathawate.i'm 21 years old and i love the programming...
-        </p>
-        <p>
-             My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
-            </p>`
-};
 function createTemplate(data){
     var title=data.title;
     var heading=data.heading;
@@ -88,12 +63,12 @@ var htmlTemplate=`
 app.get('/articleone',function (req,res){
     res.send(createTemplate(articleone));
 });
-app.get('/articletwo',function (req,res){
-    res.send(createTemplate(articletwo));
-});
-app.get('/articlethree',function (req,res){
-    res.send(createTemplate(articlethree));
-});
+//app.get('/articletwo',function (req,res){
+  //  res.send(createTemplate(articletwo));
+//});
+//app.get('/articlethree',function (req,res){
+  //  res.send(createTemplate(articlethree));
+//});
 
 //app.get('/:articleName',function (req,res){
   //  var articleName=req.params.articleName;
