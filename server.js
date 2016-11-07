@@ -9,7 +9,7 @@ app.use(morgan('combined'));
  
  var articleone={
     title:' article-one |kathawate',
-    heading:'article-one',
+    heading:'article-one latest',
     date:'nov 6, 2016',
     content: `<p>
          My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
@@ -21,7 +21,7 @@ app.use(morgan('combined'));
 };
 var articletwo={
      title:' article-two |kathawate',
-    heading:'article-two',
+    heading:'article-two latest',
     date:'nov 6, 2016',
     content: `<p>
          My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
@@ -34,7 +34,7 @@ var articletwo={
 };
   var articlethree ={
      title:' article-three |kathawate',
-    heading:'article-three',
+    heading:'article-three latest',
     date:'nov 6, 2016',
     content: `<p>
          My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
