@@ -1,5 +1,5 @@
 var button=document.getElementById('counter');
-var counter=0;
+
 button.onclick=function(){
   var request= new XMLHttpRequest();
   
@@ -17,6 +17,8 @@ button.onclick=function(){
   request.open('GET','http://kathawate.imad.hasura-app.io/counter',true);
   request.send(null);
 };
+
+
 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
