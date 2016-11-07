@@ -61,7 +61,7 @@ var htmlTemplate=`
 }
 //var articleName=req.params.articleName;
 
-app.get('/:articleName',function (req,res){
+app.get('/articleOne',function (req,res){
     res.send(createTemplate(articleOne));
 });
 
