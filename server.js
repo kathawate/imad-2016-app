@@ -4,8 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
- ' articleone':{
+
+ var articleone={
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -16,7 +16,7 @@ var articles={
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-}};
+};
 var articletwo={
      title:' article-two |kathawate',
     heading:'article-two',
@@ -85,11 +85,11 @@ var htmlTemplate=`
     return htmlTemplate;
 }
 
-var articleName=req.params.articleName;
+//var articleName=req.params.articleName;
 
-app.get('/:articleName',function (req,res){
-    res.send(createTemplate(articles[articleName]));
-});
+//app.get('/:articleName',function (req,res){
+ //   res.send(createTemplate(articles[articleName]));
+//});
 
 //app.get('/articleone', function (req, res) {
   // res.send(createTemplate(articleone));
