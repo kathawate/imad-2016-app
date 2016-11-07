@@ -9,8 +9,8 @@ app.use(morgan('combined'));
 
 
   var articleone ={
-    title:' article-one |kathawate shubham',
-    heading:'article-one',
+    title:' article-one |kathawate',
+    heading:'article-one latest',
     date:'nov 6, 2016',
     content: `<p>
          My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
