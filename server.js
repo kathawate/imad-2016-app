@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
  
  
- var articleone={
+ var articleOne={
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -22,7 +22,7 @@ app.use(morgan('combined'));
 
 function createTemplate(data){
     var title=data.title;
-     var heading=data.heading;
+    var heading=data.heading;
     var date=data.date;
     var content=data.content;
    
@@ -56,14 +56,13 @@ var htmlTemplate=`
  </body>     
 
 </html>
-
 `;
     return htmlTemplate;
 }
-var articleName=req.params.articleName;
+//var articleName=req.params.articleName;
 
 app.get('/:articleName',function (req,res){
-    res.send(createTemplate(articles[articleName]));
+    res.send(createTemplate(articleOne));
 });
 
 
