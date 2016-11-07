@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
  
  
- var articleOne={
+ var articleone={
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -61,7 +61,7 @@ var htmlTemplate=`
 }
 //var articleName=req.params.articleName;
 
-app.get('/article',function (req,res){
+app.get('/articleone',function (req,res){
     res.send(createTemplate(articleOne));
 });
 
