@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
+//var articles={
   'articleone':{
     title:' article-one |kathawate',
     heading:'article-one',
@@ -44,7 +44,7 @@ var articles={
             </p>`
 },
 };
-function createTemplate(data){
+//function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
     var date=data.date;
@@ -96,9 +96,9 @@ app.get('/', function (req, res) {
 //res.send(counter.toString());
 //});
 
-var articleName=req.params.articleName;
+//var articleName=req.params.articleName;
 
-app.get('/:articleName',function (req,res){
+//app.get('/:articleName',function (req,res){
     res.send(createTemplate(articles[articleName]));
 });
 
@@ -113,8 +113,8 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 
-var names = [];
-app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxx
+//var names = [];
+//app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxx
 //Get the name from the request
 //var name = req.params.name;
 
@@ -124,7 +124,7 @@ app.get('/submit-name', function(req,res) { // URL: /submit-name?name=xxxxx
 //res.send(JSON.stringify(names));
 });
 
-var port = 8081; // Use 8080 for local development because you might already have apache running on 80
-app.listen(8081, function () {
+var port = 8080; // Use 8080 for local development because you might already have apache running on 80
+app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
