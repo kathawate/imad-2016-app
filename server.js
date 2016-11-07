@@ -92,14 +92,14 @@ var htmlTemplate=`
 //});
 
 app.get('/articleone', function (req, res) {
-   res.sendFile(createTemplate(articleone));
+   res.send(createTemplate(articleone));
 });
 
 app.get('/articletwo', function (req, res) {
-   res.sendFile(createTemplate(articletwo));
+   res.send(createTemplate(articletwo));
 });
 app.get('/articlethree', function (req, res) {
-   res.sendFile(createTemplate(articlethree));
+   res.send(createTemplate(articlethree));
 });
 
 
