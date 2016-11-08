@@ -42,8 +42,6 @@ var articletwo={
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
 };
-
-
 function createTemplate(data){
     var title=data.title;
      var heading=data.heading;
@@ -85,7 +83,7 @@ var htmlTemplate=`
     return htmlTemplate;
 }
 
-//
+
 
 //app.get('/:articleName',function (req,res){
 //var articleName=req.params.articleName;
@@ -121,6 +119,7 @@ app.get('/counter',function(req,res){
     counter = counter + 1;
     res.send(counter.toString());
 });
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
