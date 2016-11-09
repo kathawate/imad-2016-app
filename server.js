@@ -16,7 +16,8 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
- var articleone={
+var articles={
+  'article-one':{
     title:' article-one |kathawate',
     heading:'article-one',
     date:'nov 6, 2016',
@@ -27,8 +28,8 @@ app.use(morgan('combined'));
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
-};
-var articletwo={
+},
+  'article-two':{
      title:' article-two |kathawate',
     heading:'article-two',
     date:'nov 6, 2016',
@@ -40,8 +41,8 @@ var articletwo={
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
     
-};
-  var articlethree={
+},
+   'article-three':{
      title:' article-three |kathawate',
     heading:'article-three',
     date:'nov 6, 2016',
@@ -52,6 +53,8 @@ var articletwo={
         <p>
              My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming... My name is shubham kathawate.i'm 21 years old and i love the programming...
             </p>`
+}
+    
 };
 function createTemplate(data){
     var title=data.title;
@@ -96,10 +99,10 @@ var htmlTemplate=`
 
 
 
-//app.get('/:articleName',function (req,res){
-//var articleName=req.params.articleName;
- //   res.send(createTemplate(articles[articleName]));
-//});
+app.get('/:articleName',function (req,res){
+var articleName = req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
+});
 
 app.get('/articleone', function (req, res) {
    res.send(createTemplate(articleone));
