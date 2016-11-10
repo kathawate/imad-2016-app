@@ -157,9 +157,24 @@ app.post('/create-user',function(req,res){
 });
 
 
+app.get('/login',function(req,res){
+      var username=req.body.username;
+    var password=req.body.password;
+       pool.query('SELECT *from "user" usename=$1',[username] ,function(err,result){
+         if(err){
+           res.status(500).send(err.toString());
+       }else{
+           if(result.rows.lenght ===0){
+               res.send(400)send('username/password is invalid');
+           }else{
+               
+           
+           res.send('User sucessfully created :'+username);
+           }
+       } 
+});
 
-
-
+});
 
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
