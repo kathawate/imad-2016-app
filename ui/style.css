@@ -18,9 +18,10 @@ body {
 
 .img-medium {
     height: 200px;
+    width: 500px;
 }
  .container{
-     
+       max-width:500px;
        margin:0 auto;
        color:black;
        font-family:sans-serif;
